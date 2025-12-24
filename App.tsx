@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { DIALECTS, VOICE_TYPES, VOICE_FIELDS, STUDIO_CONTROLS, CATEGORY_STYLES, getBaseVoiceForType, DialectInfo, VoiceProfile, VoiceField } from './constants';
 import { GenerationHistory, VoiceControls } from './types';
-import { savioService } from './services/geminiService';
+import { TahaService } from './services/geminiService';
 
 // --- Cinematic Intro Component ---
 const CinematicIntro: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
