@@ -63,13 +63,13 @@ const CinematicIntro: React.FC<{ onComplete: () => void }> = ({ onComplete }) =>
       {/* Main Intro Content */}
       <div className="relative z-10 text-center scale-up">
         <div className={`${stage === 'titles' ? 'animate-cinematic' : 'opacity-0 transition-opacity duration-1000'}`}>
-          <h2 className="android-tech-logo text-6xl md:text-8xl">SAVIO</h2>
+          <h2 className="android-tech-logo text-6xl md:text-8xl">Arabic Sound</h2>
           <div className="android-subtitle text-sm md:text-base">VOICE OVER</div>
         </div>
 
         <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-1000 ${stage === 'reveal' ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
           <div className="relative flex flex-col items-center">
-            <h2 className="android-tech-logo text-5xl md:text-7xl">SAVIO</h2>
+            <h2 className="android-tech-logo text-5xl md:text-7xl">Arabic Sound</h2>
             <div className="android-subtitle text-xs md:text-sm">VOICE OVER</div>
             
             {/* Intro Waveform Reacting */}
@@ -229,7 +229,7 @@ const ControlGroup: React.FC<{
 const App: React.FC = () => {
   const [showIntro, setShowIntro] = useState<boolean>(() => {
     // Session-based intro playing logic
-    const played = sessionStorage.getItem('savio_intro_played');
+    const played = sessionStorage.getItem('Taha_intro_played');
     return played !== 'true';
   });
 
@@ -298,7 +298,7 @@ const App: React.FC = () => {
     setError(null);
     setIsPreprocessing(true);
     try {
-      const refined = await savioService.preprocessText(inputText, {
+      const refined = await tahaService.preprocessText(inputText, {
         dialect: selectedDialect.title,
         field: selectedField.title,
         personality: selectedVoiceName,
@@ -341,7 +341,7 @@ const App: React.FC = () => {
       `;
       
       const baseVoice = getBaseVoiceForType(selectedType, activeVoice?.gender || (selectedGender === 'ذكر' ? 'male' : 'female'));
-      const audioUrl = await savioService.generateVoiceOver(textToUse, baseVoice, performanceNote);
+      const audioUrl = await tahaService.generateVoiceOver(textToUse, baseVoice, performanceNote);
       
       const result: GenerationHistory = {
         id: Math.random().toString(36).substr(2, 9),
@@ -416,14 +416,14 @@ const App: React.FC = () => {
   const downloadAudio = (url: string, id: string) => {
     const a = document.createElement('a');
     a.href = url;
-    a.download = `SAVIO_VO_${id}.wav`;
+    a.download = `taha_VO_${id}.wav`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
   };
 
   const finishIntro = () => {
-    sessionStorage.setItem('savio_intro_played', 'true');
+    sessionStorage.setItem('taha_intro_played', 'true');
     setShowIntro(false);
   };
 
@@ -501,7 +501,7 @@ const App: React.FC = () => {
             </svg>
           </div>
           <div>
-            <h1 className="text-6xl font-bold gold-text tracking-tight leading-tight">سافيو استوديو</h1>
+            <h1 className="text-6xl font-bold gold-text tracking-tight leading-tight">الصوت العربي </h1>
             <p className="text-white/30 text-xs uppercase tracking-[0.6em] font-medium mt-2">Professional Arabic Voice Engine</p>
           </div>
         </div>
@@ -816,7 +816,7 @@ const App: React.FC = () => {
 
       <footer className="mt-40 text-center relative z-10">
         <div className="h-px w-48 bg-gradient-to-r from-transparent via-white/10 to-transparent mx-auto mb-10"></div>
-        <p className="text-xs text-white/20 uppercase tracking-[0.8em] font-light">&copy; ٢٠٢٤ سافيو استوديو</p>
+        <p className="text-xs text-white/20 uppercase tracking-[0.8em] font-light">&copy; الصوت العربي</p>
         <p className="text-[9px] text-white/10 mt-2 tracking-widest uppercase">Powered by Gemini AI Engine</p>
       </footer>
       <audio ref={audioRef} className="hidden" />
