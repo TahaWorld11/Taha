@@ -86,7 +86,7 @@ function audioBufferToWav(buffer: AudioBuffer): Blob {
   return new Blob([outBuffer], { type: "audio/wav" });
 }
 
-export class SavioStudioService {
+export class TahaStudioService {
   private ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
 
   async preprocessText(text: string, options: { dialect: string, field: string, personality: string, controls: any }): Promise<string> {
@@ -166,4 +166,4 @@ ${performanceNote}
   }
 }
 
-export const savioService = new SavioStudioService();
+export const TahaService = new TahaStudioService();
