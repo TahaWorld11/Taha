@@ -91,7 +91,7 @@ export class SavioStudioService {
 
   async preprocessText(text: string, options: { dialect: string, field: string, personality: string, controls: any }): Promise<string> {
     const prompt = `
-أنت خبير معالجة نصوص في استوديو "سافيو VO". مهمتك هي إعادة صياغة النص العربي التالي ليناسب الأداء الصوتي المحترف.
+أنت خبير معالجة نصوص. مهمتك هي إعادة صياغة النص العربي التالي ليناسب الأداء الصوتي المحترف.
 
 المعايير المطلوبة:
 1. اللهجة: ${options.dialect}. (حول المفردات وبنية الجملة لتناسب اللهجة).
@@ -120,7 +120,7 @@ export class SavioStudioService {
 
   async generateVoiceOver(text: string, voiceName: string, performanceNote: string): Promise<string> {
     const studioDirective = `
-توجيه استوديو سافيو VO الاحترافي:
+
 يجب عليك محاكاة أداء صوتي عربي فائق الجودة بناءً على المعايير التالية بدقة متناهية:
 
 ${performanceNote}
