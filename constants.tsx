@@ -94,16 +94,16 @@ export const DIALECTS: DialectInfo[] = [
   },
   {
     id: 'iraqi',
-    title: 'اللهجة العراقية',
+    title: 'اللهجة العمانية',
     description: 'عميق، شجي، يحمل قوة التعبير والأصالة الرافدينية العريقة.',
     profiles: [
       { name: 'علي', gender: 'male', voiceType: 'بالغ', category: 'قصص شعبية', categoryKey: 'drama', description: 'صوت ذكوري عراقي عاطفي غني بالتعبير الشعبي، مناسب للروايات التراثية والمحتوى الدرامي.' },
       { name: 'مهند', gender: 'male', voiceType: 'بالغ', category: 'إعلان تجاري', categoryKey: 'ads', description: 'صوت عراقي شبابي سريع ومؤثر يناسب الإعلانات والمحتوى التسويقية.' },
       { name: 'حيدر', gender: 'male', voiceType: 'بالغ', category: 'بودكاست واقعي', categoryKey: 'podcast', description: 'نبرة عراقية هادئة ومباشرة مناسبة للبودكاست والنقاش الاجتماعي.' },
       { name: 'سمر', gender: 'female', voiceType: 'بالغ', category: 'قصص شعبية', categoryKey: 'drama', description: 'صوت أنثوي عراقي مليء بالأصالة والروح العربية، مناسب للقصص الحوارات الإنسانية.' },
-      { name: 'زهراء', gender: 'female', voiceType: 'بالغ', category: 'بودكاست', categoryKey: 'podcast', description: 'صوت واضح وطبيعي باللهجة العراقية مناسب للمحتوى التثقيفي والحوار الودي.' },
-      { name: 'ميمو', gender: 'male', voiceType: 'شخصية كارتونية', category: 'كارتوني فكاهي', categoryKey: 'cartoon', description: 'صوت مضحك وسريع باللهجة العراقية مناسب لشخصيات الرسوم المتحركة الكوميدية.' },
-      { name: 'لولي', gender: 'female', voiceType: 'شخصية كارتونية', category: 'كارتوني خيالي', categoryKey: 'cartoon', description: 'صوت لطيف وخيالي باللهجة العراقية مناسب للقصص الصوتية الكارتونية.' }
+      { name: 'زهراء', gender: 'female', voiceType: 'بالغ', category: 'بودكاست', categoryKey: 'podcast', description: 'صوت واضح وطبيعي باللهجة العمانية مناسب للمحتوى التثقيفي والحوار الودي.' },
+      { name: 'ميمو', gender: 'male', voiceType: 'شخصية كارتونية', category: 'كارتوني فكاهي', categoryKey: 'cartoon', description: 'صوت مضحك وسريع باللهجة العمانية مناسب لشخصيات الرسوم المتحركة الكوميدية.' },
+      { name: 'موزة', gender: 'female', voiceType: 'شخصية كارتونية', category: 'كارتوني خيالي', categoryKey: 'cartoon', description: 'صوت لطيف وخيالي باللهجة العمانية مناسب للقصص الصوتية الكارتونية.' }
     ]
   },
   {
